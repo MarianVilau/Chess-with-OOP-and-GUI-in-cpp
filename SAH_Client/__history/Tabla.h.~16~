@@ -1,0 +1,19 @@
+//---------------------------------------------------------------------------
+
+#ifndef TablaH
+#define TablaH
+#include "Piese.h"
+//---------------------------------------------------------------------------
+
+class Tabla
+{
+	private:
+		Piese Harta[8][8];
+
+	public:
+
+        void Analizeaza(String t);
+		int Coloana(char ch);
+};
+
+#endif

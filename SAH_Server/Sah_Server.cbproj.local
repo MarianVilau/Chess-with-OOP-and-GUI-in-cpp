@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899/12/30 00:00:00.000.387,F:\SAH\Tabla.cpp=F:\SAH\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.298,F:\SAH\Tabla.cpp=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.139,C:\Users\mvila\Documents\Embarcadero\Studio\Projects\Unit3.cpp=D:\ISM\II\sem 1\SAH\Initial.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.134,=C:\Users\mvila\Documents\Embarcadero\Studio\Projects\Unit3.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.027,F:\SAH\Interfata.dfm=F:\SAH\Initial.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.027,F:\SAH\Interfata.h=F:\SAH\Initial.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.192,F:\SAH\Sah.cbproj=F:\SAH\Project3.cbproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.138,C:\Users\mvila\Documents\Embarcadero\Studio\Projects\Project3PCH1.h=D:\ISM\II\sem 1\SAH\Project3PCH1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.013,=C:\Users\mvila\Documents\Embarcadero\Studio\Projects\Project3PCH1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.387,F:\SAH\Tabla.h=F:\SAH\Unit1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.027,F:\SAH\Interfata.cpp=F:\SAH\Initial.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.915,D:\ISM\II\sem 1\SAH\Piese.cpp=D:\ISM\II\sem 1\SAH\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.915,D:\ISM\II\sem 1\SAH\Piese.h=D:\ISM\II\sem 1\SAH\Unit1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.120,=D:\ISM\II\sem 1\SAH\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.469,=F:\SAH\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.139,C:\Users\mvila\Documents\Embarcadero\Studio\Projects\Unit3.h=D:\ISM\II\sem 1\SAH\Initial.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.069,F:\SAH\SahPCH1.h=F:\SAH\Project3PCH1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.139,C:\Users\mvila\Documents\Embarcadero\Studio\Projects\Unit3.dfm=D:\ISM\II\sem 1\SAH\Initial.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.889,C:\Users\mvila\Documents\Embarcadero\Studio\Projects\Project3.cbproj=D:\ISM\II\sem 1\SAH\Project3.cbproj</Transaction>
+    <Transaction>2022/12/31 18:32:35.000.164,=F:\SAH\Unit1.cpp</Transaction>
+    <Transaction>2022/12/31 18:32:42.000.455,F:\SAH\Tabla.h=F:\SAH\Unit1.h</Transaction>
+    <Transaction>2022/12/31 18:32:42.000.455,F:\SAH\Tabla.cpp=F:\SAH\Unit1.cpp</Transaction>
+    <Transaction>2022/12/31 20:41:41.000.950,F:\SAH\Tabla.cpp=</Transaction>
+    <Transaction>2023/01/05 16:08:56.000.999,F:\SAH_Server\Sah_ServerPCH1.h=F:\SAH_Server\SahPCH1.h</Transaction>
+    <Transaction>2023/01/05 16:08:57.000.141,F:\SAH_Server\Sah_Server.cbproj=F:\SAH_Server\Sah.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>

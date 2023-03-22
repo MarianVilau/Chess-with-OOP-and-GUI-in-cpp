@@ -1,0 +1,129 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#include <Windows.h>
+#pragma hdrstop
+
+#include "Interfata.h"
+#include <stdexcept>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm3 *Form3;
+//---------------------------------------------------------------------------
+__fastcall TForm3::TForm3(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm3::btnStartClick(TObject *Sender)
+{
+	   for(int i=0;i<16;i++)
+	   {
+		   switch(i)
+		   {
+			   case 0:   Tabla[i]=new Tura(imgTuraN1,230,80,'N');
+						 Tabla[i+24]=new Tura(imgTuraA1,230,416,'A');
+						 break;
+
+			   case 1:   Tabla[i]=new Cal(imgCalN1,278,80,'N');
+						 Tabla[i+24]=new Cal(imgCalA1,278,416,'A');
+						 break;
+
+			   case 2:   Tabla[i]=new Nebun(imgNebunN1,326,80,'N');
+						 Tabla[i+24]=new Nebun(imgNebunA1,326,416,'A');
+						 break;
+			   case 3:   Tabla[i]=new Regina(imgReginaN,374,80,'N');
+						 Tabla[i+24]=new Regina(imgReginaA,374,416,'A');
+						 break;
+			   case 4:   Tabla[i]=new Rege(imgRegeN,422,80,'N');
+						 Tabla[i+24]=new Rege(imgRegeA,422,416,'A');
+						 break;
+			   case 5:   Tabla[i]=new Nebun(imgNebunN2,470,80,'N');
+						 Tabla[i+24]=new Nebun(imgNebunA2,470,416,'A');
+						 break;
+			   case 6:   Tabla[i]=new Cal(imgCalN2,518,80,'N');
+						 Tabla[i+24]=new Cal(imgCalA2,518,416,'A');
+						 break;
+			   case 7:   Tabla[i]=new Tura(imgTuraN2,566,80,'N');
+						 Tabla[i+24]=new Tura(imgTuraA2,566,416,'A');
+						 break;
+
+			   case 8:   Tabla[i]=new Pion(imgPionN1,230,128,'N');
+						 Tabla[i+8]=new Pion(imgPionA1,230,368,'A');
+						 break;
+			   case 9:   Tabla[i]=new Pion(imgPionN2,278,128,'N');
+						 Tabla[i+8]=new Pion(imgPionA2,278,368,'A');
+						 break;
+			   case 10:  Tabla[i]=new Pion(imgPionN3,326,128,'N');
+						 Tabla[i+8]=new Pion(imgPionA3,326,368,'A');
+						 break;
+			   case 11:  Tabla[i]=new Pion(imgPionN4,374,128,'N');
+						 Tabla[i+8]=new Pion(imgPionA4,374,368,'A');
+						 break;
+			   case 12:  Tabla[i]=new Pion(imgPionN5,422,128,'N');
+						 Tabla[i+8]=new Pion(imgPionA5,422,368,'A');
+						 break;
+			   case 13:  Tabla[i]=new Pion(imgPionN6,470,128,'N');
+						 Tabla[i+8]=new Pion(imgPionA6,470,368,'A');
+						 break;
+			   case 14:  Tabla[i]=new Pion(imgPionN7,518,128,'N');
+						 Tabla[i+8]=new Pion(imgPionA7,518,368,'A');
+						 break;
+			   case 15:  Tabla[i]=new Pion(imgPionN8,566,128,'N');
+						 Tabla[i+8]=new Pion(imgPionA8,566,368,'A');
+						 break;
+
+		   }
+	   }
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::btnMutaClick(TObject *Sender)
+{
+	int lin1,col1,lin2,col2;
+	Piese piesa;
+	piesa.AnalizaMutare(piesa, EditMutari->Text,&lin1,&lin2,&col1,&col2);
+
+	Memo1->Lines->Add(EditMutari->Text);
+	ClientSocket->Socket->SendText(EditMutari->Text);
+
+	int l=piesa.Cautare(Tabla,col1,lin1);
+	int ll=piesa.Cautare(Tabla,col2,lin2);
+
+	if(ll!=-1)
+	{
+	   //if(Tabla[ll]->ValidareMutare(lin1,lin2,col1,col2))
+		Tabla[ll]->Captura(Tabla[ll]);
+	   //else  Memo1->Lines->Add("Mutare invalida");
+	}
+
+	try
+	{
+	   if(l!=-1)
+	  // {
+	  //	if(Tabla[l]->ValidareMutare(lin1,lin2,col1,col2))
+		{
+			Tabla[l]->getPiesa()->Top+=lin2-lin1;
+			Tabla[l]->getPiesa()->Left+=col2-col1;
+
+			Tabla[l]->setX(Tabla[l]->getPiesa()->Left);
+			Tabla[l]->setY(Tabla[l]->getPiesa()->Top);
+		}
+	  //	else  Memo1->Lines->Add("Mutare invalida");
+	  // }
+	}
+	catch (std::out_of_range& e){}
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm3::ClientSocketRead(TObject *Sender, TCustomWinSocket *Socket)
+{
+	 Memo1->Lines->Add(Socket->ReceiveText());
+}
+//---------------------------------------------------------------------------
+

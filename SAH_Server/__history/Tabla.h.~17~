@@ -1,0 +1,20 @@
+//---------------------------------------------------------------------------
+
+#ifndef TablaH
+#define TablaH
+#include "Piese.h"
+#include <Vcl.ExtCtrls.hpp>
+//---------------------------------------------------------------------------
+
+class Tabla
+{
+	private:
+		Piese Harta[8][8];
+
+	public:
+        Tabla();
+        void Analizeaza(String t);
+		int Coloana(char ch);
+};
+
+#endif

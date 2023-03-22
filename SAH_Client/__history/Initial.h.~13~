@@ -1,0 +1,72 @@
+//---------------------------------------------------------------------------
+
+#ifndef InitialH
+#define InitialH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
+
+#include "Piese.h"
+
+//---------------------------------------------------------------------------
+class TForm3 : public TForm
+{
+__published:	// IDE-managed Components
+	TImage *imgTable;
+	TImage *imgTuraA1;
+	TImage *imgCalA1;
+	TImage *imgNebunA1;
+	TImage *imgReginaA;
+	TImage *imgPionA1;
+	TImage *imgPionA3;
+	TImage *imgTuraA2;
+	TImage *imgCalA2;
+	TImage *imgNebunA2;
+	TImage *imgRegeA;
+	TImage *imgPionA2;
+	TImage *imgPionA4;
+	TImage *imgPionA6;
+	TImage *imgPionA8;
+	TImage *imgPionA5;
+	TImage *imgPionA7;
+	TImage *imgTuraN1;
+	TImage *imgCalN1;
+	TImage *imgNebunN1;
+	TImage *imgReginaN;
+	TImage *imgPionN1;
+	TImage *imgPionN3;
+	TImage *imgTuraN2;
+	TImage *imgCalN2;
+	TImage *imgNebunN2;
+	TImage *imgRegeN;
+	TImage *imgPionN2;
+	TImage *imgPionN4;
+	TImage *imgPionN6;
+	TImage *imgPionN8;
+	TImage *imgPionN5;
+	TImage *imgPionN7;
+	TLabel *Label1;
+	TMemo *Memo1;
+	TButton *btnStart;
+	TButton *btnFinal;
+	void __fastcall imgTableMouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
+          int X, int Y);
+	void __fastcall btnStartClick(TObject *Sender);
+	void __fastcall btnFinalClick(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+
+
+	 Piese *piesaN[16], *piesaA[16];
+
+
+	__fastcall TForm3(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm3 *Form3;
+//---------------------------------------------------------------------------
+#endif

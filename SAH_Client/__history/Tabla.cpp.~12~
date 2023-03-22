@@ -1,0 +1,51 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Tabla.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+
+Tabla::Tabla()
+{
+	Harta[0][0]=Piese(*imgTuraN1;,'N');
+	Harta[0][7]=Piese(*imgTuraN2;,'N');
+	Harta[7][0]=Piese(*imgTuraA1;,'A');
+	Harta[7][7]=Piese(*imgTuraA2;,'A');
+
+	Harta[0][1]=Piese(*imgCalN1;,'N');
+	Harta[0][6]=Piese(*imgCalN2;,'N');
+	Harta[7][1]=Piese(*imgCalA1;,'A');
+	Harta[7][6]=Piese(*imgCalA2;,'A');
+
+	Harta[0][2]=Piese(*imgNebunN1;,'N');
+	Harta[0][4]=Piese(*imgNebunN2;,'N');
+	Harta[7][2]=Piese(*imgNebunA1;,'A');
+	Harta[7][5]=Piese(*imgNebunA2;,'A');
+
+	Harta[0][3]=Piese(*imgReginaN;,'N');
+	Harta[7][3]=Piese(*imgReginaA;,'A');
+
+	Harta[0][4]=Piese(*imgRegeN;,'N');
+	Harta[7][4]=Piese(*imgRegeA;,'A');
+
+	Harta[1][0]=Piese(*imgPionN8,'N');
+	Harta[1][1]=Piese(*imgPionN7,'N');
+	Harta[1][2]=Piese(*imgPionN6,'N');
+	Harta[1][3]=Piese(*imgPionN5,'N');
+	Harta[1][4]=Piese(*imgPionN4,'N');
+	Harta[1][5]=Piese(*imgPionN3,'N');
+	Harta[1][6]=Piese(*imgPionN2,'N');
+	Harta[1][7]=Piese(*imgPionN1,'N');
+
+	Harta[6][0]=Piese(*imgPionA8,'A');
+	Harta[6][1]=Piese(*imgPionA7,'A');
+	Harta[6][2]=Piese(*imgPionA6,'A');
+	Harta[6][3]=Piese(*imgPionA5,'A');
+	Harta[6][4]=Piese(*imgPionA4,'A');
+	Harta[6][5]=Piese(*imgPionA3,'A');
+	Harta[6][6]=Piese(*imgPionA2,'A');
+	Harta[6][7]=Piese(*imgPionA1,'A');
+
+}
